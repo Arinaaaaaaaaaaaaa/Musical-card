@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical card</title>
+    <h3>Перетягніть зображення на область листівки</h3>
+    <style>
+#card { 
+    width: 800px;
+    height: 650px;
+    padding: 10px;
+    background: rgb(191, 140, 210);
+    margin-right: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.product {
+    margin: 10px;
+}
+
+.product img {
+    width: 230px;
+}
+
+.card-text {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+
+  background: linear-gradient(90deg, #ff6ec4, #7873f5);
+}
+    </style>
+</head>
+
+<body>
+    <div id="card" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p class="card-text">Зі святом!🎉</p>
+      </div>
+    <div class="product">
+        <img id="wolf" src="images/204118.512.webp" draggable="true" ondragstart="drag(event)"
+        data-text="Вовк" />
+        <audio id="music" src="music/Yummie - Bubblegum (1).mp3"></audio>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
