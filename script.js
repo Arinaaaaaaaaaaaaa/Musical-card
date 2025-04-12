@@ -9,7 +9,6 @@ function drag(event) {
 }
 
 function drop(event) {
-    wolf.size = '80px';
     event.preventDefault();
     const data = event.dataTransfer.getData("text");
     const draggedElement = document.getElementById(data);
@@ -19,9 +18,8 @@ function drop(event) {
         card.appendChild(draggedElement);
         music.play();
     }
-}
-
-function stop(event) {
-    event.preventDefault();
+    const stopButton = document.querySelector("button[type='stop']");
+  stopButton.addEventListener("click", function() {
     music.pause();
+});
 }
